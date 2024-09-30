@@ -1,5 +1,6 @@
 project(sampleLib)
-
+find_package(PkgConfig)
+find_package(OGRE REQUIRED COMPONENTS Bites CONFIG)
 add_library(${PROJECT_NAME} STATIC)
 add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
@@ -13,6 +14,7 @@ target_sources(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME}
     PUBLIC
+    OgreBites
 )
 
 target_include_directories(

@@ -5,8 +5,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 option(ENABLE_TESTING "Enable testing" ON)
 
-
-
 include(cmake/PreventInSourceBuilds.cmake)
 include(cmake/coverage.cmake)
 include(cmake/stacktrace.cmake)

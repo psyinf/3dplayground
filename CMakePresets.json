@@ -14,7 +14,8 @@
       "binaryDir": "${sourceDir}/out/build/${presetName}",
       "installDir": "${sourceDir}/out/install/${presetName}",
       "cacheVariables": {
-        "CPM_SOURCE_CACHE": "${sourceDir}/out/.cache/cpm/"
+        "CPM_SOURCE_CACHE": "${sourceDir}/out/.cache/cpm/",
+        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
       }
     },
     {
@@ -37,7 +38,8 @@
       },
       "cacheVariables": {
         "ENABLE_CPPCHECK_DEFAULT": "FALSE",
-        "ENABLE_CLANG_TIDY_DEFAULT": "FALSE"
+        "ENABLE_CLANG_TIDY_DEFAULT": "FALSE",
+        "VCPKG_TARGET_TRIPLET": "x64-windows"
       }
     },
     {
@@ -69,6 +71,7 @@
         "CMAKE_CXX_COMPILER": "cl",
         "CMAKE_BUILD_TYPE": "Debug",
         "ENABLE_DEVELOPER_MODE": "ON"
+       
       },
       "environment": {
         "CFLAGS": "/fsanitize=address",
